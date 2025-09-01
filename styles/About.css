@@ -1,0 +1,32 @@
+/* ==============================
+   About Section
+   ============================== */
+.about {
+    max-width: 900px;
+    margin: 3rem auto;
+    line-height: 1.8;
+    background: var(--color-light);
+    padding: 2rem;
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-md);
+    transition: box-shadow var(--transition-fast);
+}
+
+.about:hover {
+    box-shadow: var(--shadow-lg);
+}
+
+.about h2 {
+    color: var(--color-primary);
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
+
+/* ==============================
+   Dark Mode: About Section
+   ============================== */
+body.dark-mode .about {
+    background: var(--color-light);
+    box-shadow: var(--shadow-md);
+    border: none; /* Remove light mode border in dark mode */
+}

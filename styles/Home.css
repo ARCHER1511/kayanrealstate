@@ -1,0 +1,99 @@
+/* ==============================
+   Home Page
+   ============================== */
+main {
+    padding: 2.5rem;
+}
+
+.hero {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.hero h2 {
+    font-size: var(--font-xl);
+    margin-bottom: 1.5rem;
+    color: var(--color-primary);
+    transition: color var(--transition-fast);
+}
+
+.hero:hover h2 {
+    color: var(--color-hover);
+}
+
+.highlights {
+    background: var(--color-light);
+    padding: 1.5rem;
+    border-radius: var(--radius-md);
+    box-shadow: var(--shadow-sm);
+}
+
+.highlights h3 {
+    margin-bottom: 1.5rem;
+    color: var(--color-primary);
+}
+
+.highlights ul {
+    list-style: none;
+    padding: 0;
+}
+
+.highlights ul li {
+    margin: 0.75rem 0;
+    padding-left: 1.75rem;
+    position: relative;
+    transition: color var(--transition-fast);
+}
+
+.highlights ul li:hover {
+    color: var(--color-hover);
+}
+
+.highlights ul li::before {
+    content: "✔";
+    color: var(--color-secondary);
+    position: absolute;
+    left: 0;
+}
+
+/* ==============================
+   Dark Mode: Hero & Highlights
+   ============================== */
+body.dark-mode .hero h2 {
+    color: var(--color-primary);
+}
+
+body.dark-mode .highlights {
+    background: var(--color-light);
+    box-shadow: var(--shadow-md);
+    border: none; /* Remove light mode border in dark mode */
+}
+
+body.dark-mode .highlights h3 {
+    color: var(--color-secondary);
+}
+
+body.dark-mode .highlights ul li::before {
+    color: var(--color-hover);
+}
+
+/* ==============================
+   Dark Mode: Carousel & Overrides
+   ============================== */
+body.dark-mode .carousel {
+    background-color: var(--color-light);
+}
+
+body.dark-mode .carousel-control-prev-icon,
+body.dark-mode .carousel-control-next-icon {
+    filter: invert(1);
+}
+
+body.dark-mode .bg-light {
+    background-color: var(--color-light) !important;
+    color: var(--color-text) !important;
+}
+
+body.dark-mode .text-dark {
+    color: var(--color-text) !important;
+}

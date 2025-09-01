@@ -1,0 +1,228 @@
+/* ==============================
+   Root Variables
+   ============================== */
+:root {
+  /* Brand Colors - Light Mode */
+  --color-primary: #4a90e2;   /* Light blue for header/footer/nav */
+  --color-secondary: #f4b400; /* Vibrant yellow for accents */
+  --color-accent: #e6f0ff;    /* Softer light blue for highlights */
+  --color-light: #e6e6e6;     /* Subtle background */
+  --color-dark: #092c6c;      /* Deep blue for contrasts */
+  --color-text: #1c2128;      /* Dark gray for text */
+  --color-white: #ffffff;     /* Pure white */
+  --color-hover: #fbbc04;     /* Hover color for interactions */
+
+  /* Typography */
+  --font-base: clamp(14px, 1vw + 12px, 16px);
+  --font-lg: clamp(18px, 1.5vw + 14px, 20px);
+  --font-xl: clamp(24px, 2vw + 20px, 32px);
+
+  /* Layout */
+  --radius-sm: 6px;
+  --radius-md: 8px;
+  --radius-lg: 12px; /* Slightly increased for modern feel */
+
+  /* Shadows */
+  --shadow-sm: 0 4px 8px rgba(199, 199, 199, 0.823);
+  --shadow-md: 0 6px 12px rgba(0, 0, 0, 0.823);
+  --shadow-lg: 0 8px 16px rgba(85, 85, 85, 0.823); /* Stronger shadow */
+
+  /* Transitions */
+  --transition-fast: 0.2s ease;
+  --transition-slow: 0.3s ease;
+}
+
+/* ==============================
+   General Reset & Body
+   ============================== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Arial, sans-serif; /* Modern font stack */
+  font-size: var(--font-base);
+  color: var(--color-text);
+  background: var(--color-white);
+  line-height: 1.6;
+  transition: background var(--transition-slow), color var(--transition-slow);
+}
+
+body:not(.dark-mode) .service-card,
+body:not(.dark-mode) .client-card,
+body:not(.dark-mode) .about,
+body:not(.dark-mode) .contact-info,
+body:not(.dark-mode) .contact-form,
+body:not(.dark-mode) .highlights {
+  border: 1px solid var(--color-accent);
+}
+
+header.navbar, footer.bg-light, main, section {
+  transition: background var(--transition-slow), color var(--transition-slow);
+}
+
+body.dark-mode {
+  /* Brand Colors - Dark Mode */
+  --color-primary: #0d47a1;   /* Dark blue for header/footer/nav */
+  --color-secondary: #fbbc04; /* Keep yellow for pop */
+  --color-accent: #1e3a8a;    /* Darker blue accent */
+  --color-light: #1e1e1e;     /* Dark background */
+  --color-dark: #0f172a;      /* Deeper dark */
+  --color-text: #bfdbfe;      /* Light blue-tinted text for contrast */
+  --color-white: #121212;     /* Dark base */
+  --color-hover: #fbbc04;     /* Same hover color as light mode */
+
+  background: var(--color-white);
+  color: var(--color-text);
+}
+
+body.dark-mode .service-card,
+body.dark-mode .client-card,
+body.dark-mode .about,
+body.dark-mode .contact-info,
+body.dark-mode .contact-form,
+body.dark-mode .highlights {
+  border: none; /* Remove light mode border in dark mode */
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+  transition: color var(--transition-fast);
+}
+
+a:hover {
+  color: var(--color-hover);
+}
+
+/* ==============================
+   Header & Footer
+   ============================== */
+header.navbar, footer.bg-light {
+  background: var(--color-primary) !important; /* Override Bootstrap's bg-light */
+  color: var(--color-text) !important; /* Override text-muted */
+  padding: 1.5rem;
+  box-shadow: var(--shadow-sm);
+}
+
+header.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+header.navbar nav .nav-link {
+  color: var(--color-text);
+  margin: 0 0.75rem;
+  font-weight: 600;
+  transition: color var(--transition-fast), text-decoration var(--transition-fast);
+}
+
+header.navbar nav .nav-link:hover {
+  color: var(--color-hover);
+  text-decoration: none;
+}
+
+header.navbar .navbar-brand {
+  color: var(--color-text);
+}
+
+header.navbar .navbar-brand:hover {
+  color: var(--color-hover);
+}
+
+#lang-switch {
+  background: var(--color-secondary);
+  color: #000;
+  border: none;
+  padding: 0.6rem 1.2rem;
+  cursor: pointer;
+  border-radius: var(--radius-sm);
+  font-weight: 600;
+  transition: background var(--transition-fast), transform var(--transition-fast);
+}
+
+#lang-switch:hover {
+  background: #e0a800;
+  transform: scale(1.05);
+}
+
+footer.bg-light {
+  background: var(--color-primary) !important; /* Ensure footer uses primary color */
+  color: var(--color-text) !important; /* Override text-muted */
+  text-align: center;
+  margin-top: 3rem;
+  font-size: 0.95rem;
+  border-top: 1px solid var(--color-accent);
+  padding-top: 1.5rem;
+}
+
+footer.bg-light a {
+  color: var(--color-text);
+}
+
+footer.bg-light a:hover {
+  color: var(--color-hover);
+}
+
+/* ==============================
+   Dark Mode Overrides
+   ============================== */
+body.dark-mode header.navbar,
+body.dark-mode footer.bg-light {
+  background: var(--color-primary) !important; /* Ensure primary color in dark mode */
+  color: var(--color-text) !important; /* Override text-muted */
+}
+
+body.dark-mode header.navbar .nav-link {
+  color: var(--color-text);
+}
+
+body.dark-mode header.navbar .nav-link:hover {
+  color: var(--color-hover);
+}
+
+body.dark-mode header.navbar .navbar-brand {
+  color: var(--color-text);
+}
+
+/* Theme Switch Style */
+#theme-toggle {
+  background: transparent;
+  border: 2px solid var(--color-secondary);
+  border-radius: var(--radius-sm);
+  padding: 0.5rem 0.8rem;
+  font-size: 1.1rem;
+  cursor: pointer;
+  margin-left: 0.75rem;
+  transition: background var(--transition-fast), color var(--transition-fast), transform var(--transition-fast);
+}
+
+#theme-toggle:hover {
+  background: var(--color-hover);
+  color: var(--color-dark);
+  transform: scale(1.05);
+}
+
+/* ==============================
+   Responsive Design
+   ============================== */
+@media (max-width: 992px) {
+  header.navbar {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  header.navbar nav {
+    margin-top: 1rem;
+  }
+}
+
+@media (max-width: 600px) {
+  main {
+    padding: 1.5rem;
+  }
+}

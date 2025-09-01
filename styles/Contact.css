@@ -1,0 +1,128 @@
+/* ==============================
+   Contact Section
+   ============================== */
+.contact {
+    padding: 3rem;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.contact h2 {
+    text-align: center;
+    color: var(--color-primary);
+    margin-bottom: 2.5rem;
+}
+
+.contact-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2.5rem;
+}
+
+.contact-info {
+    background: var(--color-light);
+    padding: 2rem;
+    border-radius: var(--radius-md);
+    box-shadow: var(--shadow-sm);
+    transition: background var(--transition-fast), box-shadow var(--transition-fast);
+}
+
+.contact-info:hover {
+    background: var(--color-accent);
+    box-shadow: var(--shadow-md);
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    background: var(--color-light);
+    padding: 2rem;
+    border-radius: var(--radius-md);
+    box-shadow: var(--shadow-sm);
+    transition: box-shadow var(--transition-fast);
+}
+
+.contact-form:hover {
+    box-shadow: var(--shadow-md);
+}
+
+.contact-form label {
+    margin: 0.75rem 0 0.3rem;
+    font-weight: 600;
+}
+
+.contact-form input,
+.contact-form textarea {
+    padding: 1rem;
+    margin-bottom: 1.5rem;
+    border: 1px solid var(--color-accent);
+    border-radius: var(--radius-sm);
+    transition: border-color var(--transition-fast), background var(--transition-fast);
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+    border-color: var(--color-hover);
+    background: var(--color-light);
+}
+
+.contact-form button {
+    background: var(--color-primary);
+    color: var(--color-white);
+    border: none;
+    padding: 1rem;
+    border-radius: var(--radius-sm);
+    cursor: pointer;
+    font-weight: 600;
+    transition: background var(--transition-fast), transform var(--transition-fast);
+}
+
+.contact-form button:hover {
+    background: var(--color-hover);
+    transform: scale(1.02);
+}
+
+/* ==============================
+   Dark Mode: Contact Section
+   ============================== */
+body.dark-mode .contact-info {
+    background: var(--color-light);
+    box-shadow: var(--shadow-md);
+    border: none; /* Remove light mode border in dark mode */
+}
+
+body.dark-mode .contact-info:hover {
+    background: var(--color-accent);
+    box-shadow: var(--shadow-md);
+}
+
+body.dark-mode .contact-form {
+    background: var(--color-light);
+    box-shadow: var(--shadow-md);
+    border: none; /* Remove light mode border in dark mode */
+}
+
+body.dark-mode .contact-form:hover {
+    box-shadow: var(--shadow-md);
+}
+
+body.dark-mode .contact-form input,
+body.dark-mode .contact-form textarea {
+    background: var(--color-accent);
+    border: 1px solid #555;
+    color: var(--color-text);
+}
+
+body.dark-mode .contact-form input::placeholder,
+body.dark-mode .contact-form textarea::placeholder {
+    color: #bbb;
+}
+
+body.dark-mode .contact-form button {
+    background: var(--color-primary);
+    color: var(--color-white);
+}
+
+body.dark-mode .contact-form button:hover {
+    background: var(--color-hover);
+}
