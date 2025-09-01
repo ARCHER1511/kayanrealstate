@@ -10,8 +10,22 @@ let currentLang = localStorage.getItem("lang") || "ar";
 // دالة لتغيير اللغة
 export function setLanguage(lang) {
   currentLang = lang;
+
+  // Save language and direction
   localStorage.setItem("lang", lang);
-  navigate(window.location.hash); // إعادة تحميل الصفحة الحالية بالترجمة الصحيحة
+  localStorage.setItem("dir", lang === "ar" ? "rtl" : "ltr");
+
+  // Apply language and direction to document
+  document.documentElement.setAttribute("lang", lang);
+  document.documentElement.setAttribute("dir", lang === "ar" ? "rtl" : "ltr");
+
+  // Apply font based on language
+  const font = lang === "ar" ? "'Cairo', sans-serif" : "'Inter', sans-serif";
+  document.body.style.fontFamily = font;
+  localStorage.setItem("font", font);
+
+  // Reload current page with correct translation
+  navigate(window.location.hash);
 }
 
 // نظام التوجيه (Routing)
@@ -51,6 +65,29 @@ async function navigate(hash) {
       setLanguage(next);
     });
   }
+  // Theme Toggle
+  const themeToggle = document.getElementById("theme-toggle");
+
+  // check saved preference
+  let currentTheme = localStorage.getItem("theme") || "light";
+  if (currentTheme === "dark") {
+    document.body.classList.add("dark-mode");
+    themeToggle.textContent = "☀️";
+  } else {
+    themeToggle.textContent = "🌙";
+  }
+
+  themeToggle.addEventListener("click", () => {
+    document.body.classList.toggle("dark-mode");
+
+    if (document.body.classList.contains("dark-mode")) {
+      localStorage.setItem("theme", "dark");
+      themeToggle.textContent = "☀️";
+    } else {
+      localStorage.setItem("theme", "light");
+      themeToggle.textContent = "🌙";
+    }
+  });
 }
 
 // متابعة التغيير في الرابط
@@ -58,8 +95,21 @@ window.addEventListener("hashchange", () => navigate(window.location.hash));
 
 // أول تحميل
 window.addEventListener("DOMContentLoaded", () => {
+  // Restore saved language settings before rendering
+  const savedLang = localStorage.getItem("lang") || "ar";
+  const savedDir = localStorage.getItem("dir") || "rtl";
+  const savedFont = localStorage.getItem("font") || "'Cairo', sans-serif";
+
+  document.documentElement.setAttribute("lang", savedLang);
+  document.documentElement.setAttribute("dir", savedDir);
+  document.body.style.fontFamily = savedFont;
+
+  currentLang = savedLang;
+
+  // Set default route if missing
   if (!window.location.hash) {
-    window.location.hash = "#/home"; // افتراضي الصفحة الرئيسية
+    window.location.hash = "#/home";
   }
+
   navigate(window.location.hash);
 });

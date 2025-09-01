@@ -1,11 +1,30 @@
-<header>
-  <div class="logo">Real Estate Valuation Co.</div>
-  <nav>
-    <a href="#/">Home</a>
-    <a href="#/about">About</a>
-    <a href="#/services">Services</a>
-    <a href="#/clients">Clients</a>
-    <a href="#/contact">Contact</a>
-  </nav>
-  <button id="lang-switch">AR</button>
+<header class="navbar navbar-expand-lg bg-light px-4 py-3 shadow-sm">
+  <div class="container-fluid">
+    <!-- Logo and Brand -->
+    <a class="navbar-brand d-flex align-items-center gap-2" href="#">
+      <img src="assets/logo.png" alt="Company Logo" width="40" height="40" class="img-fluid" />
+      <span class="fw-bold">Real Estate Valuation Co.</span>
+    </a>
+
+    <!-- Toggler for mobile -->
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <!-- Navigation Links and Controls -->
+    <nav class="collapse navbar-collapse justify-content-between" id="navbarNav">
+      <ul class="navbar-nav mb-2 mb-lg-0">
+        <li class="nav-item"><a class="nav-link" href="#/">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="#/about">About</a></li>
+        <li class="nav-item"><a class="nav-link" href="#/services">Services</a></li>
+        <li class="nav-item"><a class="nav-link" href="#/clients">Clients</a></li>
+        <li class="nav-item"><a class="nav-link" href="#/contact">Contact</a></li>
+      </ul>
+
+      <div class="d-flex align-items-center gap-2">
+        <button id="lang-switch" class="btn btn-outline-secondary btn-sm">AR</button>
+        <button id="theme-toggle" class="btn btn-outline-dark btn-sm">🌙</button>
+      </div>
+    </nav>
+  </div>
 </header>

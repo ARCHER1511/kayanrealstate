@@ -11,7 +11,9 @@ export async function Clients(lang) {
 
   return `
     ${await Header(lang)}
+    <div class="container animate__animated animate__fadeIn min-vh-100">
     ${content}
+    </div>
     ${await Footer(lang)}
   `;
 }

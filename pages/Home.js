@@ -11,7 +11,9 @@ export async function Home(lang) {
 
   return `
     ${await Header(lang)}
+    <main class="container py-5 animate__animated animate__fadeIn min-vh-100">
     ${content}
+    </main>
     ${await Footer(lang)}
   `;
 }
