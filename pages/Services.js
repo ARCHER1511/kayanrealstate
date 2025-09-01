@@ -1,0 +1,17 @@
+import { Header } from "../components/Header.js";
+import { Footer } from "../components/Footer.js";
+
+export async function Services(lang) {
+  const file = lang === "ar" 
+    ? "./pages/Services.ar.html" 
+    : "./pages/Services.en.html";
+
+  const res = await fetch(file);
+  const content = await res.text();
+
+  return `
+    ${await Header(lang)}
+    ${content}
+    ${await Footer(lang)}
+  `;
+}
