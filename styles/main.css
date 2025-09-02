@@ -32,6 +32,7 @@
   --transition-slow: 0.3s ease;
   /* Background Image */
   --bg-image: url('../assets/background/light.jpg'); /* Light mode image */
+  --bg-color: #c9ddf6; /* Light background color */
   --overlay-color: rgba(255, 255, 255, 0.3);            /* Soft white overlay */
 }
 
@@ -80,6 +81,7 @@ body.dark-mode {
   background: var(--color-white);
   color: var(--color-text);
   --bg-image: url('../assets/background/dark.jpg'); /* Dark mode image */
+  --bg-color: #00112a; /* Dark background color */
   --overlay-color: rgba(0, 0, 0, 0.134);                 /* Soft dark overlay */
 }
 
@@ -235,7 +237,8 @@ body.dark-mode header.navbar .navbar-brand {
 /* backbround */
 
 main {
-  background-image: var(--bg-image);
+  /* background-image: var(--bg-image); */
+  background-color: var(--bg-color);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
