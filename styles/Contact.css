@@ -2,7 +2,7 @@
    Contact Section
    ============================== */
 .contact {
-    padding: 3rem;
+    padding: 2rem 1rem; /* Reduced padding for smaller screens */
     max-width: 1200px;
     margin: auto;
 }
@@ -10,18 +10,19 @@
 .contact h2 {
     text-align: center;
     color: var(--color-primary);
-    margin-bottom: 2.5rem;
+    margin-bottom: 2rem;
+    font-size: 2rem; /* Default font size for desktop */
 }
 
 .contact-grid {
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 2.5rem;
+    grid-template-columns: 1fr 1fr; /* Two columns for desktop */
+    gap: 1.5rem; /* Reduced gap for better spacing */
 }
 
 .contact-info {
     background: var(--color-light);
-    padding: 2rem;
+    padding: 1.5rem;
     border-radius: var(--radius-md);
     box-shadow: var(--shadow-sm);
     transition: background var(--transition-fast), box-shadow var(--transition-fast);
@@ -36,7 +37,7 @@
     display: flex;
     flex-direction: column;
     background: var(--color-light);
-    padding: 2rem;
+    padding: 1.5rem;
     border-radius: var(--radius-md);
     box-shadow: var(--shadow-sm);
     transition: box-shadow var(--transition-fast);
@@ -47,17 +48,19 @@
 }
 
 .contact-form label {
-    margin: 0.75rem 0 0.3rem;
+    margin: 0.5rem 0 0.2rem;
     font-weight: 600;
+    font-size: 1rem;
 }
 
 .contact-form input,
 .contact-form textarea {
-    padding: 1rem;
-    margin-bottom: 1.5rem;
+    padding: 0.8rem;
+    margin-bottom: 1rem;
     border: 1px solid var(--color-accent);
     border-radius: var(--radius-sm);
     transition: border-color var(--transition-fast), background var(--transition-fast);
+    font-size: 1rem;
 }
 
 .contact-form input:focus,
@@ -70,10 +73,11 @@
     background: var(--color-primary);
     color: var(--color-white);
     border: none;
-    padding: 1rem;
+    padding: 0.8rem;
     border-radius: var(--radius-sm);
     cursor: pointer;
     font-weight: 600;
+    font-size: 1rem;
     transition: background var(--transition-fast), transform var(--transition-fast);
 }
 
@@ -83,12 +87,72 @@
 }
 
 /* ==============================
+   Responsive Design
+   ============================== */
+@media (max-width: 768px) {
+    .contact {
+        padding: 1.5rem 0.5rem; /* Further reduce padding for mobile */
+    }
+
+    .contact h2 {
+        font-size: 1.5rem; /* Smaller heading for mobile */
+    }
+
+    .contact-grid {
+        grid-template-columns: 1fr; /* Stack columns vertically */
+        gap: 1rem;
+    }
+
+    .contact-info,
+    .contact-form {
+        padding: 1rem; /* Reduce padding for smaller screens */
+    }
+
+    .contact-form label {
+        font-size: 0.9rem;
+    }
+
+    .contact-form input,
+    .contact-form textarea {
+        padding: 0.6rem;
+        font-size: 0.9rem;
+    }
+
+    .contact-form button {
+        padding: 0.7rem;
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .contact h2 {
+        font-size: 1.25rem; /* Even smaller heading for very small screens */
+    }
+
+    .contact-info,
+    .contact-form {
+        padding: 0.8rem;
+    }
+
+    .contact-form input,
+    .contact-form textarea {
+        padding: 0.5rem;
+        font-size: 0.85rem;
+    }
+
+    .contact-form button {
+        padding: 0.6rem;
+        font-size: 0.85rem;
+    }
+}
+
+/* ==============================
    Dark Mode: Contact Section
    ============================== */
 body.dark-mode .contact-info {
     background: var(--color-light);
     box-shadow: var(--shadow-md);
-    border: none; /* Remove light mode border in dark mode */
+    border: none;
 }
 
 body.dark-mode .contact-info:hover {
@@ -99,7 +163,7 @@ body.dark-mode .contact-info:hover {
 body.dark-mode .contact-form {
     background: var(--color-light);
     box-shadow: var(--shadow-md);
-    border: none; /* Remove light mode border in dark mode */
+    border: none;
 }
 
 body.dark-mode .contact-form:hover {
