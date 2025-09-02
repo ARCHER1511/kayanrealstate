@@ -30,6 +30,9 @@
   /* Transitions */
   --transition-fast: 0.2s ease;
   --transition-slow: 0.3s ease;
+  /* Background Image */
+  --bg-image: url('../assets/background/light.jpg'); /* Light mode image */
+  --overlay-color: rgba(255, 255, 255, 0.3);            /* Soft white overlay */
 }
 
 /* ==============================
@@ -76,6 +79,8 @@ body.dark-mode {
   --color-btn-font: #ffffff; /* Button font color */
   background: var(--color-white);
   color: var(--color-text);
+  --bg-image: url('../assets/background/dark.jpg'); /* Dark mode image */
+  --overlay-color: rgba(0, 0, 0, 0.134);                 /* Soft dark overlay */
 }
 
 body.dark-mode .service-card,
@@ -226,3 +231,26 @@ body.dark-mode header.navbar .navbar-brand {
     padding: 1.5rem;
   }
 } 
+
+/* backbround */
+
+main {
+  background-image: var(--bg-image);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+  opacity: 0;
+  animation: fadeInBg 1.5s ease-in-out forwards;
+}
+
+main::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-color: var(--overlay-color);
+  pointer-events: none;
+  z-index: -1;
+  opacity: 0;
+  animation: fadeInOverlay 1.5s ease-in-out forwards;
+}
