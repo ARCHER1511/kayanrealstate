@@ -97,3 +97,361 @@ body.dark-mode .bg-light {
 body.dark-mode .text-dark {
     color: var(--color-text) !important;
 }
+
+.company-intro-section {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+  padding: 2rem 1.5rem;
+  margin-top: 2rem;
+  background-color: var(--bg-light);
+  color: var(--text-light);
+  border-radius: var(--radius-lg);
+}
+
+.company-intro-text {
+  flex: 1 1 400px;
+}
+
+.company-intro-text h2 {
+  color: var(--accent);
+  margin-bottom: 1rem;
+  font-size: 1.75rem;
+}
+
+.company-intro-text p {
+  margin-bottom: 1.5rem;
+  line-height: 1.8;
+}
+
+.company-intro-text .cta-button {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  background-color: var(--accent);
+  color: var(--color-btn-font);
+  border-radius: var(--radius-md);
+  text-decoration: none;
+  transition: background-color var(--transition-fast);
+}
+
+.company-intro-text .cta-button:hover {
+  background-color: var(--color-hover);
+}
+
+.company-intro-image {
+  flex: 1 1 300px;
+  max-width: 400px;
+  clip-path: polygon(25% 6%, 75% 6%, 100% 50%, 75% 94%, 25% 94%, 0% 50%);
+  overflow: hidden;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.company-intro-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+/* why our company */
+
+.why-kayan-section {
+  padding: 2rem 1.5rem;
+  margin-top: 2rem;
+  background-color: var(--bg-light);
+  color: var(--text-light);
+  border-radius: var(--radius-lg);
+}
+
+.why-kayan-section h2 {
+  text-align: center;
+  color: var(--accent);
+  margin-bottom: 2rem;
+  font-size: 1.75rem;
+}
+
+.why-kayan-content {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.why-kayan-text {
+  flex: 1 1 400px;
+  line-height: 1.8;
+}
+
+.why-kayan-text p {
+  margin-bottom: 1.5rem;
+}
+
+.why-kayan-text .cta-button {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  background-color: var(--accent);
+  color: var(--color-btn-font);
+  border-radius: var(--radius-md);
+  text-decoration: none;
+  transition: background-color var(--transition-fast);
+}
+
+.why-kayan-text .cta-button:hover {
+  background-color: var(--color-hover);
+}
+
+.why-kayan-stats {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 1rem;
+  flex: 1 1 400px;
+}
+
+.stat-box {
+  background-color: var(--color-light);
+  border-radius: var(--radius-md);
+  padding: 1rem;
+  text-align: center;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+  transition: transform var(--transition-fast), box-shadow var(--transition-fast);
+}
+
+.stat-box:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.stat-box .number {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: var(--accent);
+}
+
+.stat-box .label {
+  margin-top: 0.5rem;
+  font-size: 1rem;
+} 
+
+/* main evaluation methods */
+.valuation-methods-section {
+  padding: 2rem 1.5rem;
+  margin-top: 2rem;
+  background-color: var(--bg-light);
+  color: var(--text-light);
+  border-radius: var(--radius-lg);
+}
+
+.valuation-methods-section h2 {
+  text-align: center;
+  color: var(--accent);
+  margin-bottom: 2rem;
+  font-size: 1.75rem;
+}
+
+.valuation-methods-cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  justify-content: center;
+}
+
+.valuation-card {
+  flex: 1 1 280px;
+  background-color: var(--color-light);
+  border-radius: var(--radius-md);
+  padding: 1.5rem;
+  text-align: center;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+  transition: transform var(--transition-fast), box-shadow var(--transition-fast);
+}
+
+.valuation-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.valuation-card i {
+  font-size: 2rem;
+  color: var(--accent);
+  margin-bottom: 1rem;
+  display: block;
+}
+
+.valuation-card h3 {
+  color: var(--color-primary);
+  margin-bottom: 0.75rem;
+  font-size: 1.25rem;
+}
+
+.valuation-card p {
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+.valuation-methods-section .cta-button {
+  display: block;
+  width: fit-content;
+  margin: 2rem auto 0;
+  padding: 0.75rem 1.5rem;
+  background-color: var(--accent);
+  color: var(--color-btn-font);
+  border-radius: var(--radius-md);
+  text-decoration: none;
+  transition: background-color var(--transition-fast);
+}
+
+.valuation-methods-section .cta-button:hover {
+  background-color: var(--color-hover);
+}
+/* Services */
+.real-estate-services-section {
+  padding: 2rem 1.5rem;
+  margin-top: 2rem;
+  background-color: var(--bg-light);
+  color: var(--text-light);
+  border-radius: var(--radius-lg);
+}
+
+.real-estate-services-section h2 {
+  text-align: center;
+  color: var(--accent);
+  margin-bottom: 2rem;
+  font-size: 1.75rem;
+}
+
+.services-columns {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: space-between;
+}
+
+.service-category {
+  flex: 1 1 400px;
+  background-color: var(--color-light);
+  border-radius: var(--radius-md);
+  padding: 1.5rem;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+
+.service-category h3 {
+  color: var(--color-primary);
+  margin-bottom: 1rem;
+  font-size: 1.25rem;
+}
+
+.service-category ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.service-category li {
+  margin-bottom: 0.75rem;
+  padding-left: 1.5rem;
+  position: relative;
+  line-height: 1.6;
+}
+
+.service-category li::before {
+  content: "✔";
+  position: absolute;
+  left: 0;
+  color: var(--accent);
+} 
+/* licenses */
+.licenses-simple-section {
+  padding: 2rem 1.5rem;
+  margin-top: 2rem;
+  background-color: var(--bg-light);
+  color: var(--text-light);
+  border-radius: var(--radius-lg);
+}
+
+.licenses-simple-section h2 {
+  text-align: center;
+  color: var(--accent);
+  margin-bottom: 2rem;
+  font-size: 1.75rem;
+}
+
+.license-simple-cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  justify-content: center;
+}
+
+.license-simple-card {
+  flex: 1 1 220px;
+  background-color: var(--color-light);
+  border-radius: var(--radius-md);
+  padding: 1rem;
+  text-align: center;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+  transition: transform var(--transition-fast), box-shadow var(--transition-fast);
+}
+
+.license-simple-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.license-simple-card img {
+  max-width: 80px;
+  margin-bottom: 1rem;
+}
+
+.license-simple-card p {
+  margin: 0.5rem 0;
+  font-size: 0.95rem;
+} 
+
+/* clients */
+
+.clients-section {
+  padding: 2rem 1.5rem;
+  margin-top: 2rem;
+  background-color: var(--bg-light);
+  color: var(--text-light);
+  border-radius: var(--radius-lg);
+}
+
+.clients-section h2 {
+  text-align: center;
+  color: var(--accent);
+  margin-bottom: 2rem;
+  font-size: 1.75rem;
+}
+
+.client-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 1.5rem;
+  justify-items: center;
+  text-align: center;
+}
+
+.client-card {
+  background-color: var(--color-light);
+  border-radius: var(--radius-md);
+  padding: 1rem;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+  transition: transform var(--transition-fast), box-shadow var(--transition-fast);
+}
+
+.client-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.client-card img {
+  max-width: 60px;
+  margin-bottom: 0.75rem;
+}
+
+.client-card p {
+  font-size: 0.95rem;
+  margin: 0;
+}

@@ -11,9 +11,9 @@ export async function Contact(lang) {
 
   return `
     ${await Header(lang)}
-    <div class="container py-5 animate__animated animate__fadeIn min-vh-100">
+    <main class="container py-5 animate__animated animate__fadeIn min-vh-100">
     ${content}
-    </div>
+    </main>
     ${await Footer(lang)}
   `;
 }

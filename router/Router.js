@@ -88,7 +88,9 @@ async function navigate(hash) {
       themeToggle.textContent = "🌙";
     }
   });
-}
+} 
+
+
 
 // متابعة التغيير في الرابط
 window.addEventListener("hashchange", () => navigate(window.location.hash));
@@ -110,6 +112,5 @@ window.addEventListener("DOMContentLoaded", () => {
   if (!window.location.hash) {
     window.location.hash = "#/home";
   }
-
   navigate(window.location.hash);
 });

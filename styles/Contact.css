@@ -28,11 +28,6 @@
     transition: background var(--transition-fast), box-shadow var(--transition-fast);
 }
 
-.contact-info:hover {
-    background: var(--color-accent);
-    box-shadow: var(--shadow-md);
-}
-
 .contact-form {
     display: flex;
     flex-direction: column;
@@ -41,10 +36,6 @@
     border-radius: var(--radius-md);
     box-shadow: var(--shadow-sm);
     transition: box-shadow var(--transition-fast);
-}
-
-.contact-form:hover {
-    box-shadow: var(--shadow-md);
 }
 
 .contact-form label {
@@ -66,7 +57,7 @@
 .contact-form input:focus,
 .contact-form textarea:focus {
     border-color: var(--color-hover);
-    background: var(--color-light);
+    background: var(--color-white);
 }
 
 .contact-form button {
@@ -155,31 +146,22 @@ body.dark-mode .contact-info {
     border: none;
 }
 
-body.dark-mode .contact-info:hover {
-    background: var(--color-accent);
-    box-shadow: var(--shadow-md);
-}
-
 body.dark-mode .contact-form {
     background: var(--color-light);
     box-shadow: var(--shadow-md);
     border: none;
 }
 
-body.dark-mode .contact-form:hover {
-    box-shadow: var(--shadow-md);
-}
-
 body.dark-mode .contact-form input,
 body.dark-mode .contact-form textarea {
-    background: var(--color-accent);
+    background: var(--color-white);
     border: 1px solid #555;
     color: var(--color-text);
 }
 
 body.dark-mode .contact-form input::placeholder,
 body.dark-mode .contact-form textarea::placeholder {
-    color: #bbb;
+    color: var(--color-accent);
 }
 
 body.dark-mode .contact-form button {
@@ -189,4 +171,23 @@ body.dark-mode .contact-form button {
 
 body.dark-mode .contact-form button:hover {
     background: var(--color-hover);
+}
+
+/* map style */
+.map-section {
+  background-color: var(--bg-light);
+  color: var(--text-light);
+  padding: 2rem;
+  border-radius: 8px;
+  margin-top: 2rem;
+}
+
+.map-section h2 {
+  color: var(--accent);
+  margin-bottom: 1rem;
+}
+
+.map-container iframe {
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
 }
