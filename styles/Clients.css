@@ -51,3 +51,139 @@ body.dark-mode .client-card:hover {
     color: var(--color-dark);
     box-shadow: var(--shadow-md);
 }
+
+/* ==============================
+   Shared Section Styling
+   ============================== */
+section {
+  padding: 2rem 1.5rem;
+  margin-top: 2rem;
+  background-color: var(--bg-light);
+  color: var(--text-light);
+  border-radius: var(--radius-lg);
+}
+
+section h2 {
+  text-align: center;
+  color: var(--accent);
+  margin-bottom: 2rem;
+  font-size: 1.75rem;
+}
+
+.cta-button {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  background-color: var(--accent);
+  color: var(--cta-btn-text);
+  border-radius: var(--radius-md);
+  text-decoration: none;
+  transition: background-color var(--transition-fast);
+}
+
+.cta-button:hover {
+  background-color: var(--color-hover);
+}
+
+/* ==============================
+   Testimonials Section
+   ============================== */
+.testimonials-section .testimonial-card {
+  background-color: var(--color-light);
+  border-radius: var(--radius-md);
+  padding: 1.5rem;
+  margin-bottom: 1rem;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+  text-align: center;
+}
+
+.testimonials-section .testimonial-card span {
+  display: block;
+  margin-top: 0.75rem;
+  font-weight: bold;
+  color: var(--color-primary);
+}
+
+/* ==============================
+   Impact Metrics Section
+   ============================== */
+.impact-metrics-section ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  max-width: 600px;
+  margin-inline: auto;
+}
+
+.impact-metrics-section li {
+  margin-bottom: 1rem;
+  padding-left: 1.5rem;
+  position: relative;
+}
+
+.impact-metrics-section li::before {
+  content: "✔";
+  position: absolute;
+  left: 0;
+  color: var(--accent);
+}
+
+/* ==============================
+   Client Education Section
+   ============================== */
+.client-education-section p {
+  text-align: center;
+  max-width: 700px;
+  margin-inline: auto;
+  margin-bottom: 1.5rem;
+}
+
+/* ==============================
+   Service Packages Section
+   ============================== */
+.client-packages-section .package-card {
+  background-color: var(--color-light);
+  border-radius: var(--radius-md);
+  padding: 1.5rem;
+  margin-bottom: 1rem;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+  text-align: center;
+}
+
+.client-packages-section .package-card h3 {
+  color: var(--color-primary);
+  margin-bottom: 0.75rem;
+}
+
+/* ==============================
+   Onboarding Section
+   ============================== */
+.onboarding-section ol {
+  max-width: 600px;
+  margin-inline: auto;
+  padding-left: 1.5rem;
+  line-height: 1.8;
+}
+
+.onboarding-section li {
+  margin-bottom: 1rem;
+}
+
+/* ==============================
+   Support Section
+   ============================== */
+.client-support-section p {
+  text-align: center;
+  max-width: 700px;
+  margin-inline: auto;
+  margin-bottom: 1.5rem;
+}
+
+/* ==============================
+   Success Stories Section
+   ============================== */
+.success-stories-section p {
+  text-align: center;
+  max-width: 700px;
+  margin-inline: auto;
+  margin-bottom: 1.5rem;
+}
